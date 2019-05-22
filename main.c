@@ -14,15 +14,18 @@
 
 Типичный размер страницы — 4096 байт
 */
+// gcc ./src/*.c -L/home/viktoria -lMyStr -o main
+// #include <MyStr/MyStr.h>
 #include <assert.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #define RS 30
 #define TAB 9
 #define LF 10
-int* delete_element(int* page, int* size, int c)
+char* delete_element(char* page, int* size, char c)
 {
-    int* new = (int*)malloc(sizeof(int) * (*size));
+    char* new = (char*)malloc(sizeof(char) * (*size));
     int j = 0;
     for (int i = 0; i < (*size); i++) {
         if (page[i] == c) {
@@ -35,7 +38,7 @@ int* delete_element(int* page, int* size, int c)
     (*size) = j;
     return new;
 }
-int* position_tab(int* page, int* size, int c)
+char* position_tab(char* page, int* size, char c)
 {
     page = delete_element(page, size, LF);
     for (int i = 0; i < (*size); i++) {
@@ -48,7 +51,7 @@ int* position_tab(int* page, int* size, int c)
         delta = 1;
     else if (c == 123)
         delta = 2;
-    int* result = (int*)malloc(sizeof(int) * 2 * (*size));
+    char* result = (char*)malloc(sizeof(char) * 2 * (*size));
     int new_size = (*size);
     int brek_open = 0;
     // int brek_close = 0;
@@ -88,7 +91,7 @@ int* position_tab(int* page, int* size, int c)
     (*size) = j;
     return result;
 }
-int check_fig(int* page, int size, int c)
+int check_fig(char* page, int size, char c)
 {
     int size_page = size;
     int delta = 0;
@@ -149,7 +152,7 @@ int sspn(int* page, int c)
     }
     return j;
 }
-int sspn_array(int* page, int c, int* check)
+int sspn_array(char* page, char c, char* check)
 {
     if (!page) {
         return -1;
@@ -165,21 +168,24 @@ int sspn_array(int* page, int c, int* check)
     }
     return 0;
 }
-int segmentation(int* page, int* size_page)
+int segmentation(char* page, int* size_page)
 {
-    int* n = (int*)calloc((*size_page), sizeof(int));
+    char n[(*size_page)];
     sspn_array(page, '{', n);
     sspn_array(page, '}', n);
     if (check_fig(n, (*size_page), '{') == -1) {
         return -1;
     }
-    free(n);
-    int* result;
+    char* result;
     result = position_tab(page, size_page, '{');
-    minys_enter(result, size_page);
+    // minys_enter(result, size_page);
+    /*------------------------------------------------------------------------*/
+    printf("%s\n", result);
+    /*
     for (int i = 0; i < (*size_page); i++) {
         printf("%c", result[i]);
     }
+    */
     return 0;
 }
 int main(int argc, char* argv[])
@@ -197,7 +203,7 @@ int main(int argc, char* argv[])
     /*------------------------------------------------------------------------*/
     // Only one page
     int n = 4096; // * sizeof(int); // 4096 * sizeof(int) -> 16384
-    int page[n];
+    char page[n];
     int i = 0;
     while ((page[i] = fgetc(myfile)) != EOF) {
         i++;
