@@ -15,6 +15,8 @@
 Типичный размер страницы — 4096 байт
 */
 // gcc ./src/*.c -L/home/viktoria -lMyStr -o main
+// ВЫЗОВ:
+// ./main log.c
 // #include <MyStr/MyStr.h>
 #include <assert.h>
 #include <stdint.h>
@@ -38,6 +40,13 @@ char* delete_element(char* page, int* size, char c)
     (*size) = j;
     return new;
 }
+void tab(char* result, int* j, int brek_open)
+{
+    result[(*j)++] = LF;
+    for (int k = 0; k < brek_open; k++) {
+        result[(*j)++] = TAB;
+    }
+}
 char* position_tab(char* page, int* size, char c)
 {
     page = delete_element(page, size, LF);
@@ -52,36 +61,24 @@ char* position_tab(char* page, int* size, char c)
     else if (c == 123)
         delta = 2;
     char* result = (char*)malloc(sizeof(char) * 2 * (*size));
-    int new_size = (*size);
+    // int new_size = (*size);
     int brek_open = 0;
     // int brek_close = 0;
     int j = 0;
     for (int i = 0; i < (*size); i++) {
         if (page[i] == ';') {
             result[j++] = ';';
-            result[j++] = LF;
-            for (int k = 0; k < brek_open; k++) {
-                result[j++] = TAB;
-            }
+            tab(result, &j, brek_open);
         } else if (page[i] == c) {
-            result[j++] = LF;
-            for (int k = 0; k < brek_open; k++) {
-                result[j++] = TAB;
-            }
+            tab(result, &j, brek_open);
             brek_open++;
             result[j++] = c;
-            result[j++] = LF;
-            for (int k = 0; k < brek_open; k++) {
-                result[j++] = TAB;
-            }
+            tab(result, &j, brek_open);
         } else if (page[i] == (c + delta)) {
             brek_open--;
             j--;
             result[j++] = (c + delta);
-            result[j++] = LF;
-            for (int k = 0; k < brek_open; k++) {
-                result[j++] = TAB;
-            }
+            tab(result, &j, brek_open);
         } else {
             result[j] = page[i];
             j++;
