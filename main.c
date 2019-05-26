@@ -1,6 +1,6 @@
 /*
-Это проект по разработки приложения для автоматического форматирования текста,
-написанного на языке С.
+Этоционал данного проект проект по разработки приложения для автоматического
+форматирования текста, написанного на языке С.
 
 Функционал данного проекта:
 
@@ -14,31 +14,53 @@
 
 Типичный размер страницы — 4096 байт
 */
-// gcc ./src/*.c -L/home/viktoria -lMyStr -o main
+// Компиляция
+// gcc main.c -lMyStr -o main
 // ВЫЗОВ:
 // ./main log.c
-// #include <MyStr/MyStr.h>
-#include <assert.h>
-#include <stdint.h>
+#include <MyStr/MyStr.h>
 #include <stdio.h>
 #include <stdlib.h>
-#define RS 30
+#include <string.h>
+#define RS 30 // разделитель записей
 #define TAB 9
 #define LF 10
-char* delete_element(char* page, int* size, char c)
+void back(char* ss)
 {
-    char* new = (char*)malloc(sizeof(char) * (*size));
+    char* s = stok(ss, "\n");
+    // delete_element()
+}
+char* tab_back(char* page)
+{
+    if (!page) {
+        return NULL;
+    }
+    char* ss = strstr(page, "while");
+    back(ss);
+    while (ss != NULL) {
+        ss = strstr(ss, "while");
+        back(ss);
+    }
+}
+int delete_element(char* page, char c)
+{
+    if (!page) {
+        exit(1);
+    }
+    int size = slen(page);
+    char* new = (char*)malloc(sizeof(char) * size);
+    scpy(new, page);
     int j = 0;
-    for (int i = 0; i < (*size); i++) {
-        if (page[i] == c) {
+    for (int i = 0; i < size; i++) {
+        if (new[i] == c) {
             i++;
         }
-        new[j] = page[i];
+        page[j] = new[i];
         j++;
     }
     page[j] = '\0';
-    (*size) = j;
-    return new;
+    size = j;
+    return size;
 }
 void tab(char* result, int* j, int brek_open)
 {
@@ -47,25 +69,24 @@ void tab(char* result, int* j, int brek_open)
         result[(*j)++] = TAB;
     }
 }
-char* position_tab(char* page, int* size, char c)
+char* position_tab(char* page, char c)
 {
-    page = delete_element(page, size, LF);
-    for (int i = 0; i < (*size); i++) {
-        printf("%c", page[i]);
-        // printf("%d\n", page[i]);
-    }
+    delete_element(page, LF);
+    delete_element(page, TAB);
+    int size = slen(page);
+    printf("%s\n", page);
     printf("\n----------------------------\n");
     int delta = 0;
     if (c == 40)
         delta = 1;
     else if (c == 123)
         delta = 2;
-    char* result = (char*)malloc(sizeof(char) * 2 * (*size));
-    // int new_size = (*size);
+    char* result = (char*)malloc(sizeof(char) * 2 * size);
+    // int new_size = size;
     int brek_open = 0;
     // int brek_close = 0;
     int j = 0;
-    for (int i = 0; i < (*size); i++) {
+    for (int i = 0; i < size; i++) {
         if (page[i] == ';') {
             result[j++] = ';';
             tab(result, &j, brek_open);
@@ -85,7 +106,7 @@ char* position_tab(char* page, int* size, char c)
         }
     }
     result[j] = '\0';
-    (*size) = j;
+    size = j;
     return result;
 }
 int check_fig(char* page, int size, char c)
@@ -94,95 +115,57 @@ int check_fig(char* page, int size, char c)
     int delta = 0;
     if (c == 40)
         delta = 1;
-    else if (c == 123)
+    else if (c == 123 || c == 91)
         delta = 2;
     int i, j;
-    for (i = 0; i < size_page; i++) {
-        if (page[i] == c) {
-            for (j = size_page; j > i; j--) {
-                if (page[j] == (c + delta)) {
-                    page[i] = 0;
-                    page[j] = 0;
-                    break;
-                }
-            }
-        }
-    }
     int enter = 1;
-    j = 1;
+    int open = 0;
+    int n_symbol = 1;
     for (i = 0; i < size; i++) {
         if (page[i] == LF) {
             enter++;
-            j = 0;
+            n_symbol = 1;
         }
-        if (page[i] != 0) {
+        if (page[i] == c) {
+            open++;
+        }
+        if (page[i] == (c + delta)) {
+            open--;
+        }
+        if (open < 0) {
             fprintf(stderr,
                     "The bracket does not close '%c'. Line %d, symbol %d\n",
                     c,
                     enter,
-                    j);
-            return 1;
+                    n_symbol);
+            return -1;
         }
         j++;
     }
-    return 0;
-}
-int slen(int* str)
-{
-    int i = 0;
-    while (str[i] != '\0') {
-        i++;
-    }
-    return i;
-}
-int sspn(int* page, int c)
-{
-    if (!page) {
+    if (open != 0) {
+        fprintf(stderr,
+                "The bracket does not close '%c'. Line %d, symbol %d\n",
+                c,
+                enter,
+                n_symbol);
         return -1;
-    }
-    int j = 0;
-    int i = 0;
-    while (page[i] != '\0') {
-        if (page[i] == c)
-            j++;
-        i++;
-    }
-    return j;
-}
-int sspn_array(char* page, char c, char* check)
-{
-    if (!page) {
-        return -1;
-    }
-    int j = 0;
-    int i = 0;
-    while (page[i] != '\0') {
-        if (page[i] == c) {
-            check[i] = c;
-            j++;
-        }
-        i++;
     }
     return 0;
 }
 int segmentation(char* page, int* size_page)
 {
-    char n[(*size_page)];
-    sspn_array(page, '{', n);
-    sspn_array(page, '}', n);
-    if (check_fig(n, (*size_page), '{') == -1) {
+    if (check_fig(page, (*size_page), '{') == -1) {
+        return -1;
+    }
+    if (check_fig(page, (*size_page), '(') == -1) {
         return -1;
     }
     char* result;
-    result = position_tab(page, size_page, '{');
+    result = position_tab(page, '{');
     // minys_enter(result, size_page);
     /*------------------------------------------------------------------------*/
-    printf("%s\n", result);
-    /*
-    for (int i = 0; i < (*size_page); i++) {
-        printf("%c", result[i]);
-    }
-    */
+    printf("%s", result);
+    tab_back(result);
     return 0;
 }
 int main(int argc, char* argv[])
@@ -205,12 +188,11 @@ int main(int argc, char* argv[])
     while ((page[i] = fgetc(myfile)) != EOF) {
         i++;
     }
-    page[i] = '\0';
-    int size_page = i;
+    page[i - 1] = '\0';
+    int size_page = i - 1;
     /*------------------------------------------------------------------------*/
     if (segmentation(page, &size_page) == -1)
         return -1;
 
-    printf("Done\n");
     return 0;
 }
