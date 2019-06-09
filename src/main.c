@@ -12,15 +12,15 @@
     log(2)16384  = 14
     log(2)32768  = 15
   ! log(2)65536  = 16 !
+  РЕАЛИЗАЦИЯ НА ОСНОВЕ СПИСКА
+  Тем самым, мы можем добавлять элементы в словарь пока не кончится память
+  на устройстве.
 */
 /* clang-format on */
 #include "code.h"
 #include "decode.h"
 #include "work.h"
-#include <assert.h>
-#include <stdint.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #define N 65536
 

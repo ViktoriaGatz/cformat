@@ -9,6 +9,7 @@
 
 list_t* create_list(int key, char* value)
 {
+    //создание листа
     list_t* new = (list_t*)malloc(sizeof(list_t));
     if (new) {
         new->key = key;
@@ -20,6 +21,7 @@ list_t* create_list(int key, char* value)
 /*------------------------------------------------------------------------*/
 list_t* list_add(int key, char* value, list_t* head)
 {
+    // добавления листа в список
     list_t* new = create_list(key, value);
     if (new) {
         new->next = head;
@@ -30,6 +32,7 @@ list_t* list_add(int key, char* value, list_t* head)
 /*------------------------------------------------------------------------*/
 int lookup(list_t* head, char* s)
 {
+    //поиск клоча по значению (возвращает ключ в случае успеха, иначе - "0")
     list_t* tmp = (list_t*)malloc(sizeof(list_t));
     tmp = head;
     while (tmp != NULL) {
@@ -44,6 +47,7 @@ int lookup(list_t* head, char* s)
 /*------------------------------------------------------------------------*/
 list_t* init_vocabulary(list_t* head)
 {
+    // инициализация начального словаря (256 символов расширенной таблицы ASCII)
     char s[5];
     s[0] = 1;
     s[1] = '\0';
@@ -65,6 +69,7 @@ list_t* init_vocabulary(list_t* head)
 /*------------------------------------------------------------------------*/
 void print_vocabulary(list_t* head)
 {
+    // печать словаря
     while (head != NULL) {
         printf("key = %d\tvalue = %s\n", head->key, head->value);
         head = head->next;

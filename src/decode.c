@@ -9,6 +9,7 @@
 
 uint32_t decode_varint(const uint8_t** bufp)
 {
+    // функция из первой части 3-ей лаболаторной
     const uint8_t* cur = *bufp;
     uint8_t byte = *cur++;
     uint32_t value = byte & 0x7f;
@@ -24,22 +25,33 @@ uint32_t decode_varint(const uint8_t** bufp)
 
 int uncompressed(FILE* txt, FILE* lzw)
 {
+    // массив, куда будут записаны разжатые символы для расшифровки
     int decod[N];
+    // 3-я лаба начало
+    uint8_t* buf = (uint8_t*)malloc(sizeof(uint8_t) * 1500000);
+    uint8_t** cur = &buf;
     int i = 0;
-    char tmp;
-    while ((tmp = fgetc(lzw)) != EOF) {
-        printf("%c\n", tmp);
-        decod[i] = tmp;
+    int j = 0;
+    int c = 0;
+    uint8_t ch = 0;
+    while ((c = fread(&ch, sizeof(uint8_t), 1, lzw)) > 0) {
+        (*cur)[i] = ch;
         i++;
     }
-    printf("i = %d\n", i);
-
-    for (int j = 0; j < i; j++) {
+    cur = &buf;
+    while ((decod[j] = decode_varint((const uint8_t**)cur)) > 0) {
+        j++;
+    }
+    // 3-я лаба конец
+    // печать чисел, пригодных к расшифровке
+    for (j = 0; j < i; j++) {
         printf("%d\n", decod[j]);
     }
-
+    // вставляем нулевой элемент в будующий словарь
     list_t* head = list_add(0, "", NULL);
-    // head = init_vocabulary(head);
+    // инициализируем начальный словарь
+    head = init_vocabulary(head);
+
     printf("uncompressed\n");
     return 0;
 }

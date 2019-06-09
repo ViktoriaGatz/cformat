@@ -9,6 +9,7 @@
 
 int compress(FILE* lzw, FILE* txt)
 {
+    // читаем из текстового файла
     char cc;
     char* string = (char*)malloc(sizeof(char) * N);
     int k = 0;
@@ -18,8 +19,9 @@ int compress(FILE* lzw, FILE* txt)
     }
     string[k] = '\0';
     printf("string = %s\n", string);
-
+    // добавляем нулевой элемент в будующий словарь
     list_t* head = list_add(0, "", NULL);
+    // инициализируем словарь
     head = init_vocabulary(head);
     printf("\nhead = %p, head->next = %p, head->key = %d\n\n",
            head,
@@ -37,7 +39,7 @@ int compress(FILE* lzw, FILE* txt)
     }
     // print_vocabulary(head);
     free(string);
-
+    // дополнительно сжимаем (3-я лаба)
     if (!code(lzw, result, k))
         printf("compress\n");
     return 0;
@@ -45,6 +47,7 @@ int compress(FILE* lzw, FILE* txt)
 /*------------------------------------------------------------------------*/
 list_t* lzw_code(char* string, int* result, list_t* head, int* k)
 {
+    // процесс кодирования
     int j = 0;
     int key = 256;
     int size = 0;
@@ -80,6 +83,7 @@ list_t* lzw_code(char* string, int* result, list_t* head, int* k)
 /*------------------------------------------------------------------------*/
 int code(FILE* lzw, int* result, int k)
 {
+    // 3-я лаба
     uint8_t tmp;
     uint8_t* buf = (uint8_t*)malloc(sizeof(uint8_t) * 1500000);
 
@@ -94,6 +98,7 @@ int code(FILE* lzw, int* result, int k)
 /*------------------------------------------------------------------------*/
 size_t encode_varint(uint32_t value, uint8_t* buf)
 {
+    // 3-я лаба, первая часть
     assert(buf != NULL);
     uint8_t* cur = buf;
     while (value >= 0x80) {
