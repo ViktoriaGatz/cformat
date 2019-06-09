@@ -1,2 +1,2 @@
 all:
-	gcc -Wall -Wextra src/main.c -o main -g3 -O0
+	gcc -Wall -Wextra src/*.c -o main -g3 -O0

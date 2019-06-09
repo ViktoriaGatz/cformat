@@ -1,0 +1,414 @@
+string = wexford
+wexind
+wexkexa
+wexler
+
+head 0x555ae55ce6f0
+head = 0x555ae55ce790, head->next = 0x555ae55ce6f0, head->key = 1, head->value = 
+head = 0x555ae55ce830, head->next = 0x555ae55ce790, head->key = 2, head->value = 
+head = 0x555ae55ce8d0, head->next = 0x555ae55ce830, head->key = 3, head->value = 
+head = 0x555ae55ce970, head->next = 0x555ae55ce8d0, head->key = 4, head->value = 
+head = 0x555ae55cea10, head->next = 0x555ae55ce970, head->key = 5, head->value = 
+head = 0x555ae55ceab0, head->next = 0x555ae55cea10, head->key = 6, head->value = 
+head = 0x555ae55ceb50, head->next = 0x555ae55ceab0, head->key = 7, head->value = 
+head = 0x555ae55cebf0, head->next = 0x555ae55ceb50, head->key = 8, head->value = 
+head = 0x555ae55cec90, head->next = 0x555ae55cebf0, head->key = 9, head->value = 	
+head = 0x555ae55ced30, head->next = 0x555ae55cec90, head->key = 10, head->value = 
+
+head = 0x555ae55cedd0, head->next = 0x555ae55ced30, head->key = 11, head->value = 
+head = 0x555ae55cee70, head->next = 0x555ae55cedd0, head->key = 12, head->value = 
+head = 0x555ae55cef10, head->next = 0x555ae55cee70, head->key = 13, head->value = 
+head = 0x555ae55cefb0, head->next = 0x555ae55cef10, head->key = 14, head->value = 
+head = 0x555ae55cf050, head->next = 0x555ae55cefb0, head->key = 15, head->value = 
+head = 0x555ae55cf0f0, head->next = 0x555ae55cf050, head->key = 16, head->value = 
+head = 0x555ae55cf190, head->next = 0x555ae55cf0f0, head->key = 17, head->value = 
+head = 0x555ae55cf230, head->next = 0x555ae55cf190, head->key = 18, head->value = 
+head = 0x555ae55cf2d0, head->next = 0x555ae55cf230, head->key = 19, head->value = 
+head = 0x555ae55cf370, head->next = 0x555ae55cf2d0, head->key = 20, head->value = 
+head = 0x555ae55cf410, head->next = 0x555ae55cf370, head->key = 21, head->value = 
+head = 0x555ae55cf4b0, head->next = 0x555ae55cf410, head->key = 22, head->value = 
+head = 0x555ae55cf550, head->next = 0x555ae55cf4b0, head->key = 23, head->value = 
+head = 0x555ae55cf5f0, head->next = 0x555ae55cf550, head->key = 24, head->value = 
+head = 0x555ae55cf690, head->next = 0x555ae55cf5f0, head->key = 25, head->value = 
+head = 0x555ae55cf730, head->next = 0x555ae55cf690, head->key = 26, head->value = 
+head = 0x555ae55cf7d0, head->next = 0x555ae55cf730, head->key = 27, head->value = 
+head = 0x555ae55cf870, head->next = 0x555ae55cf7d0, head->key = 28, head->value = 
+head = 0x555ae55cf910, head->next = 0x555ae55cf870, head->key = 29, head->value = 
+head = 0x555ae55cf9b0, head->next = 0x555ae55cf910, head->key = 30, head->value = 
+head = 0x555ae55cfa50, head->next = 0x555ae55cf9b0, head->key = 31, head->value = 
+head = 0x555ae55cfaf0, head->next = 0x555ae55cfa50, head->key = 32, head->value =  
+head = 0x555ae55cfb90, head->next = 0x555ae55cfaf0, head->key = 33, head->value = !
+head = 0x555ae55cfc30, head->next = 0x555ae55cfb90, head->key = 34, head->value = "
+head = 0x555ae55cfcd0, head->next = 0x555ae55cfc30, head->key = 35, head->value = #
+head = 0x555ae55cfd70, head->next = 0x555ae55cfcd0, head->key = 36, head->value = $
+head = 0x555ae55cfe10, head->next = 0x555ae55cfd70, head->key = 37, head->value = %
+head = 0x555ae55cfeb0, head->next = 0x555ae55cfe10, head->key = 38, head->value = &
+head = 0x555ae55cff50, head->next = 0x555ae55cfeb0, head->key = 39, head->value = '
+head = 0x555ae55cfff0, head->next = 0x555ae55cff50, head->key = 40, head->value = (
+head = 0x555ae55d0090, head->next = 0x555ae55cfff0, head->key = 41, head->value = )
+head = 0x555ae55d0130, head->next = 0x555ae55d0090, head->key = 42, head->value = *
+head = 0x555ae55d01d0, head->next = 0x555ae55d0130, head->key = 43, head->value = +
+head = 0x555ae55d0270, head->next = 0x555ae55d01d0, head->key = 44, head->value = ,
+head = 0x555ae55d0310, head->next = 0x555ae55d0270, head->key = 45, head->value = -
+head = 0x555ae55d03b0, head->next = 0x555ae55d0310, head->key = 46, head->value = .
+head = 0x555ae55d0450, head->next = 0x555ae55d03b0, head->key = 47, head->value = /
+head = 0x555ae55d04f0, head->next = 0x555ae55d0450, head->key = 48, head->value = 0
+head = 0x555ae55d0590, head->next = 0x555ae55d04f0, head->key = 49, head->value = 1
+head = 0x555ae55d0630, head->next = 0x555ae55d0590, head->key = 50, head->value = 2
+head = 0x555ae55d06d0, head->next = 0x555ae55d0630, head->key = 51, head->value = 3
+head = 0x555ae55d0770, head->next = 0x555ae55d06d0, head->key = 52, head->value = 4
+head = 0x555ae55d0810, head->next = 0x555ae55d0770, head->key = 53, head->value = 5
+head = 0x555ae55d08b0, head->next = 0x555ae55d0810, head->key = 54, head->value = 6
+head = 0x555ae55d0950, head->next = 0x555ae55d08b0, head->key = 55, head->value = 7
+head = 0x555ae55d09f0, head->next = 0x555ae55d0950, head->key = 56, head->value = 8
+head = 0x555ae55d0a90, head->next = 0x555ae55d09f0, head->key = 57, head->value = 9
+head = 0x555ae55d0b30, head->next = 0x555ae55d0a90, head->key = 58, head->value = :
+head = 0x555ae55d0bd0, head->next = 0x555ae55d0b30, head->key = 59, head->value = ;
+head = 0x555ae55d0c70, head->next = 0x555ae55d0bd0, head->key = 60, head->value = <
+head = 0x555ae55d0d10, head->next = 0x555ae55d0c70, head->key = 61, head->value = =
+head = 0x555ae55d0db0, head->next = 0x555ae55d0d10, head->key = 62, head->value = >
+head = 0x555ae55d0e50, head->next = 0x555ae55d0db0, head->key = 63, head->value = ?
+head = 0x555ae55d0ef0, head->next = 0x555ae55d0e50, head->key = 64, head->value = @
+head = 0x555ae55d0f90, head->next = 0x555ae55d0ef0, head->key = 65, head->value = A
+head = 0x555ae55d1030, head->next = 0x555ae55d0f90, head->key = 66, head->value = B
+head = 0x555ae55d10d0, head->next = 0x555ae55d1030, head->key = 67, head->value = C
+head = 0x555ae55d1170, head->next = 0x555ae55d10d0, head->key = 68, head->value = D
+head = 0x555ae55d1210, head->next = 0x555ae55d1170, head->key = 69, head->value = E
+head = 0x555ae55d12b0, head->next = 0x555ae55d1210, head->key = 70, head->value = F
+head = 0x555ae55d1350, head->next = 0x555ae55d12b0, head->key = 71, head->value = G
+head = 0x555ae55d13f0, head->next = 0x555ae55d1350, head->key = 72, head->value = H
+head = 0x555ae55d1490, head->next = 0x555ae55d13f0, head->key = 73, head->value = I
+head = 0x555ae55d1530, head->next = 0x555ae55d1490, head->key = 74, head->value = J
+head = 0x555ae55d15d0, head->next = 0x555ae55d1530, head->key = 75, head->value = K
+head = 0x555ae55d1670, head->next = 0x555ae55d15d0, head->key = 76, head->value = L
+head = 0x555ae55d1710, head->next = 0x555ae55d1670, head->key = 77, head->value = M
+head = 0x555ae55d17b0, head->next = 0x555ae55d1710, head->key = 78, head->value = N
+head = 0x555ae55d1850, head->next = 0x555ae55d17b0, head->key = 79, head->value = O
+head = 0x555ae55d18f0, head->next = 0x555ae55d1850, head->key = 80, head->value = P
+head = 0x555ae55d1990, head->next = 0x555ae55d18f0, head->key = 81, head->value = Q
+head = 0x555ae55d1a30, head->next = 0x555ae55d1990, head->key = 82, head->value = R
+head = 0x555ae55d1ad0, head->next = 0x555ae55d1a30, head->key = 83, head->value = S
+head = 0x555ae55d1b70, head->next = 0x555ae55d1ad0, head->key = 84, head->value = T
+head = 0x555ae55d1c10, head->next = 0x555ae55d1b70, head->key = 85, head->value = U
+head = 0x555ae55d1cb0, head->next = 0x555ae55d1c10, head->key = 86, head->value = V
+head = 0x555ae55d1d50, head->next = 0x555ae55d1cb0, head->key = 87, head->value = W
+head = 0x555ae55d1df0, head->next = 0x555ae55d1d50, head->key = 88, head->value = X
+head = 0x555ae55d1e90, head->next = 0x555ae55d1df0, head->key = 89, head->value = Y
+head = 0x555ae55d1f30, head->next = 0x555ae55d1e90, head->key = 90, head->value = Z
+head = 0x555ae55d1fd0, head->next = 0x555ae55d1f30, head->key = 91, head->value = [
+head = 0x555ae55d2070, head->next = 0x555ae55d1fd0, head->key = 92, head->value = \
+head = 0x555ae55d2110, head->next = 0x555ae55d2070, head->key = 93, head->value = ]
+head = 0x555ae55d21b0, head->next = 0x555ae55d2110, head->key = 94, head->value = ^
+head = 0x555ae55d2250, head->next = 0x555ae55d21b0, head->key = 95, head->value = _
+head = 0x555ae55d22f0, head->next = 0x555ae55d2250, head->key = 96, head->value = `
+head = 0x555ae55d2390, head->next = 0x555ae55d22f0, head->key = 97, head->value = a
+head = 0x555ae55d2430, head->next = 0x555ae55d2390, head->key = 98, head->value = b
+head = 0x555ae55d24d0, head->next = 0x555ae55d2430, head->key = 99, head->value = c
+head = 0x555ae55d2570, head->next = 0x555ae55d24d0, head->key = 100, head->value = d
+head = 0x555ae55d2610, head->next = 0x555ae55d2570, head->key = 101, head->value = e
+head = 0x555ae55d26b0, head->next = 0x555ae55d2610, head->key = 102, head->value = f
+head = 0x555ae55d2750, head->next = 0x555ae55d26b0, head->key = 103, head->value = g
+head = 0x555ae55d27f0, head->next = 0x555ae55d2750, head->key = 104, head->value = h
+head = 0x555ae55d2890, head->next = 0x555ae55d27f0, head->key = 105, head->value = i
+head = 0x555ae55d2930, head->next = 0x555ae55d2890, head->key = 106, head->value = j
+head = 0x555ae55d29d0, head->next = 0x555ae55d2930, head->key = 107, head->value = k
+head = 0x555ae55d2a70, head->next = 0x555ae55d29d0, head->key = 108, head->value = l
+head = 0x555ae55d2b10, head->next = 0x555ae55d2a70, head->key = 109, head->value = m
+head = 0x555ae55d2bb0, head->next = 0x555ae55d2b10, head->key = 110, head->value = n
+head = 0x555ae55d2c50, head->next = 0x555ae55d2bb0, head->key = 111, head->value = o
+head = 0x555ae55d2cf0, head->next = 0x555ae55d2c50, head->key = 112, head->value = p
+head = 0x555ae55d2d90, head->next = 0x555ae55d2cf0, head->key = 113, head->value = q
+head = 0x555ae55d2e30, head->next = 0x555ae55d2d90, head->key = 114, head->value = r
+head = 0x555ae55d2ed0, head->next = 0x555ae55d2e30, head->key = 115, head->value = s
+head = 0x555ae55d2f70, head->next = 0x555ae55d2ed0, head->key = 116, head->value = t
+head = 0x555ae55d3010, head->next = 0x555ae55d2f70, head->key = 117, head->value = u
+head = 0x555ae55d30b0, head->next = 0x555ae55d3010, head->key = 118, head->value = v
+head = 0x555ae55d3150, head->next = 0x555ae55d30b0, head->key = 119, head->value = w
+head = 0x555ae55d31f0, head->next = 0x555ae55d3150, head->key = 120, head->value = x
+head = 0x555ae55d3290, head->next = 0x555ae55d31f0, head->key = 121, head->value = y
+head = 0x555ae55d3330, head->next = 0x555ae55d3290, head->key = 122, head->value = z
+head = 0x555ae55d33d0, head->next = 0x555ae55d3330, head->key = 123, head->value = {
+head = 0x555ae55d3470, head->next = 0x555ae55d33d0, head->key = 124, head->value = |
+head = 0x555ae55d3510, head->next = 0x555ae55d3470, head->key = 125, head->value = }
+head = 0x555ae55d35b0, head->next = 0x555ae55d3510, head->key = 126, head->value = ~
+head = 0x555ae55d3650, head->next = 0x555ae55d35b0, head->key = 127, head->value = 
+head = 0x555ae55d36f0, head->next = 0x555ae55d3650, head->key = 128, head->value = €
+head = 0x555ae55d3790, head->next = 0x555ae55d36f0, head->key = 129, head->value = 
+head = 0x555ae55d3830, head->next = 0x555ae55d3790, head->key = 130, head->value = ‚
+head = 0x555ae55d38d0, head->next = 0x555ae55d3830, head->key = 131, head->value = ƒ
+head = 0x555ae55d3970, head->next = 0x555ae55d38d0, head->key = 132, head->value = „
+head = 0x555ae55d3a10, head->next = 0x555ae55d3970, head->key = 133, head->value = …
+head = 0x555ae55d3ab0, head->next = 0x555ae55d3a10, head->key = 134, head->value = †
+head = 0x555ae55d3b50, head->next = 0x555ae55d3ab0, head->key = 135, head->value = ‡
+head = 0x555ae55d3bf0, head->next = 0x555ae55d3b50, head->key = 136, head->value = ˆ
+head = 0x555ae55d3c90, head->next = 0x555ae55d3bf0, head->key = 137, head->value = ‰
+head = 0x555ae55d3d30, head->next = 0x555ae55d3c90, head->key = 138, head->value = Š
+head = 0x555ae55d3dd0, head->next = 0x555ae55d3d30, head->key = 139, head->value = ‹
+head = 0x555ae55d3e70, head->next = 0x555ae55d3dd0, head->key = 140, head->value = Œ
+head = 0x555ae55d3f10, head->next = 0x555ae55d3e70, head->key = 141, head->value = 
+head = 0x555ae55d3fb0, head->next = 0x555ae55d3f10, head->key = 142, head->value = Ž
+head = 0x555ae55d4050, head->next = 0x555ae55d3fb0, head->key = 143, head->value = 
+head = 0x555ae55d40f0, head->next = 0x555ae55d4050, head->key = 144, head->value = 
+head = 0x555ae55d4190, head->next = 0x555ae55d40f0, head->key = 145, head->value = ‘
+head = 0x555ae55d4230, head->next = 0x555ae55d4190, head->key = 146, head->value = ’
+head = 0x555ae55d42d0, head->next = 0x555ae55d4230, head->key = 147, head->value = “
+head = 0x555ae55d4370, head->next = 0x555ae55d42d0, head->key = 148, head->value = ”
+head = 0x555ae55d4410, head->next = 0x555ae55d4370, head->key = 149, head->value = •
+head = 0x555ae55d44b0, head->next = 0x555ae55d4410, head->key = 150, head->value = –
+head = 0x555ae55d4550, head->next = 0x555ae55d44b0, head->key = 151, head->value = —
+head = 0x555ae55d45f0, head->next = 0x555ae55d4550, head->key = 152, head->value = ˜
+head = 0x555ae55d4690, head->next = 0x555ae55d45f0, head->key = 153, head->value = ™
+head = 0x555ae55d4730, head->next = 0x555ae55d4690, head->key = 154, head->value = š
+head = 0x555ae55d47d0, head->next = 0x555ae55d4730, head->key = 155, head->value = ›
+head = 0x555ae55d4870, head->next = 0x555ae55d47d0, head->key = 156, head->value = œ
+head = 0x555ae55d4910, head->next = 0x555ae55d4870, head->key = 157, head->value = 
+head = 0x555ae55d49b0, head->next = 0x555ae55d4910, head->key = 158, head->value = ž
+head = 0x555ae55d4a50, head->next = 0x555ae55d49b0, head->key = 159, head->value = Ÿ
+head = 0x555ae55d4af0, head->next = 0x555ae55d4a50, head->key = 160, head->value =  
+head = 0x555ae55d4b90, head->next = 0x555ae55d4af0, head->key = 161, head->value = ¡
+head = 0x555ae55d4c30, head->next = 0x555ae55d4b90, head->key = 162, head->value = ¢
+head = 0x555ae55d4cd0, head->next = 0x555ae55d4c30, head->key = 163, head->value = £
+head = 0x555ae55d4d70, head->next = 0x555ae55d4cd0, head->key = 164, head->value = ¤
+head = 0x555ae55d4e10, head->next = 0x555ae55d4d70, head->key = 165, head->value = ¥
+head = 0x555ae55d4eb0, head->next = 0x555ae55d4e10, head->key = 166, head->value = ¦
+head = 0x555ae55d4f50, head->next = 0x555ae55d4eb0, head->key = 167, head->value = §
+head = 0x555ae55d4ff0, head->next = 0x555ae55d4f50, head->key = 168, head->value = ¨
+head = 0x555ae55d5090, head->next = 0x555ae55d4ff0, head->key = 169, head->value = ©
+head = 0x555ae55d5130, head->next = 0x555ae55d5090, head->key = 170, head->value = ª
+head = 0x555ae55d51d0, head->next = 0x555ae55d5130, head->key = 171, head->value = «
+head = 0x555ae55d5270, head->next = 0x555ae55d51d0, head->key = 172, head->value = ¬
+head = 0x555ae55d5310, head->next = 0x555ae55d5270, head->key = 173, head->value = ­
+head = 0x555ae55d53b0, head->next = 0x555ae55d5310, head->key = 174, head->value = ®
+head = 0x555ae55d5450, head->next = 0x555ae55d53b0, head->key = 175, head->value = ¯
+head = 0x555ae55d54f0, head->next = 0x555ae55d5450, head->key = 176, head->value = °
+head = 0x555ae55d5590, head->next = 0x555ae55d54f0, head->key = 177, head->value = ±
+head = 0x555ae55d5630, head->next = 0x555ae55d5590, head->key = 178, head->value = ²
+head = 0x555ae55d56d0, head->next = 0x555ae55d5630, head->key = 179, head->value = ³
+head = 0x555ae55d5770, head->next = 0x555ae55d56d0, head->key = 180, head->value = ´
+head = 0x555ae55d5810, head->next = 0x555ae55d5770, head->key = 181, head->value = µ
+head = 0x555ae55d58b0, head->next = 0x555ae55d5810, head->key = 182, head->value = ¶
+head = 0x555ae55d5950, head->next = 0x555ae55d58b0, head->key = 183, head->value = ·
+head = 0x555ae55d59f0, head->next = 0x555ae55d5950, head->key = 184, head->value = ¸
+head = 0x555ae55d5a90, head->next = 0x555ae55d59f0, head->key = 185, head->value = ¹
+head = 0x555ae55d5b30, head->next = 0x555ae55d5a90, head->key = 186, head->value = º
+head = 0x555ae55d5bd0, head->next = 0x555ae55d5b30, head->key = 187, head->value = »
+head = 0x555ae55d5c70, head->next = 0x555ae55d5bd0, head->key = 188, head->value = ¼
+head = 0x555ae55d5d10, head->next = 0x555ae55d5c70, head->key = 189, head->value = ½
+head = 0x555ae55d5db0, head->next = 0x555ae55d5d10, head->key = 190, head->value = ¾
+head = 0x555ae55d5e50, head->next = 0x555ae55d5db0, head->key = 191, head->value = ¿
+head = 0x555ae55d5ef0, head->next = 0x555ae55d5e50, head->key = 192, head->value = À
+head = 0x555ae55d5f90, head->next = 0x555ae55d5ef0, head->key = 193, head->value = Á
+head = 0x555ae55d6030, head->next = 0x555ae55d5f90, head->key = 194, head->value = Â
+head = 0x555ae55d60d0, head->next = 0x555ae55d6030, head->key = 195, head->value = Ã
+head = 0x555ae55d6170, head->next = 0x555ae55d60d0, head->key = 196, head->value = Ä
+head = 0x555ae55d6210, head->next = 0x555ae55d6170, head->key = 197, head->value = Å
+head = 0x555ae55d62b0, head->next = 0x555ae55d6210, head->key = 198, head->value = Æ
+head = 0x555ae55d6350, head->next = 0x555ae55d62b0, head->key = 199, head->value = Ç
+head = 0x555ae55d63f0, head->next = 0x555ae55d6350, head->key = 200, head->value = È
+head = 0x555ae55d6490, head->next = 0x555ae55d63f0, head->key = 201, head->value = É
+head = 0x555ae55d6530, head->next = 0x555ae55d6490, head->key = 202, head->value = Ê
+head = 0x555ae55d65d0, head->next = 0x555ae55d6530, head->key = 203, head->value = Ë
+head = 0x555ae55d6670, head->next = 0x555ae55d65d0, head->key = 204, head->value = Ì
+head = 0x555ae55d6710, head->next = 0x555ae55d6670, head->key = 205, head->value = Í
+head = 0x555ae55d67b0, head->next = 0x555ae55d6710, head->key = 206, head->value = Î
+head = 0x555ae55d6850, head->next = 0x555ae55d67b0, head->key = 207, head->value = Ï
+head = 0x555ae55d68f0, head->next = 0x555ae55d6850, head->key = 208, head->value = Ð
+head = 0x555ae55d6990, head->next = 0x555ae55d68f0, head->key = 209, head->value = Ñ
+head = 0x555ae55d6a30, head->next = 0x555ae55d6990, head->key = 210, head->value = Ò
+head = 0x555ae55d6ad0, head->next = 0x555ae55d6a30, head->key = 211, head->value = Ó
+head = 0x555ae55d6b70, head->next = 0x555ae55d6ad0, head->key = 212, head->value = Ô
+head = 0x555ae55d6c10, head->next = 0x555ae55d6b70, head->key = 213, head->value = Õ
+head = 0x555ae55d6cb0, head->next = 0x555ae55d6c10, head->key = 214, head->value = Ö
+head = 0x555ae55d6d50, head->next = 0x555ae55d6cb0, head->key = 215, head->value = ×
+head = 0x555ae55d6df0, head->next = 0x555ae55d6d50, head->key = 216, head->value = Ø
+head = 0x555ae55d6e90, head->next = 0x555ae55d6df0, head->key = 217, head->value = Ù
+head = 0x555ae55d6f30, head->next = 0x555ae55d6e90, head->key = 218, head->value = Ú
+head = 0x555ae55d6fd0, head->next = 0x555ae55d6f30, head->key = 219, head->value = Û
+head = 0x555ae55d7070, head->next = 0x555ae55d6fd0, head->key = 220, head->value = Ü
+head = 0x555ae55d7110, head->next = 0x555ae55d7070, head->key = 221, head->value = Ý
+head = 0x555ae55d71b0, head->next = 0x555ae55d7110, head->key = 222, head->value = Þ
+head = 0x555ae55d7250, head->next = 0x555ae55d71b0, head->key = 223, head->value = ß
+head = 0x555ae55d72f0, head->next = 0x555ae55d7250, head->key = 224, head->value = à
+head = 0x555ae55d7390, head->next = 0x555ae55d72f0, head->key = 225, head->value = á
+head = 0x555ae55d7430, head->next = 0x555ae55d7390, head->key = 226, head->value = â
+head = 0x555ae55d74d0, head->next = 0x555ae55d7430, head->key = 227, head->value = ã
+head = 0x555ae55d7570, head->next = 0x555ae55d74d0, head->key = 228, head->value = ä
+head = 0x555ae55d7610, head->next = 0x555ae55d7570, head->key = 229, head->value = å
+head = 0x555ae55d76b0, head->next = 0x555ae55d7610, head->key = 230, head->value = æ
+head = 0x555ae55d7750, head->next = 0x555ae55d76b0, head->key = 231, head->value = ç
+head = 0x555ae55d77f0, head->next = 0x555ae55d7750, head->key = 232, head->value = è
+head = 0x555ae55d7890, head->next = 0x555ae55d77f0, head->key = 233, head->value = é
+head = 0x555ae55d7930, head->next = 0x555ae55d7890, head->key = 234, head->value = ê
+head = 0x555ae55d79d0, head->next = 0x555ae55d7930, head->key = 235, head->value = ë
+head = 0x555ae55d7a70, head->next = 0x555ae55d79d0, head->key = 236, head->value = ì
+head = 0x555ae55d7b10, head->next = 0x555ae55d7a70, head->key = 237, head->value = í
+head = 0x555ae55d7bb0, head->next = 0x555ae55d7b10, head->key = 238, head->value = î
+head = 0x555ae55d7c50, head->next = 0x555ae55d7bb0, head->key = 239, head->value = ï
+head = 0x555ae55d7cf0, head->next = 0x555ae55d7c50, head->key = 240, head->value = ð
+head = 0x555ae55d7d90, head->next = 0x555ae55d7cf0, head->key = 241, head->value = ñ
+head = 0x555ae55d7e30, head->next = 0x555ae55d7d90, head->key = 242, head->value = ò
+head = 0x555ae55d7ed0, head->next = 0x555ae55d7e30, head->key = 243, head->value = ó
+head = 0x555ae55d7f70, head->next = 0x555ae55d7ed0, head->key = 244, head->value = ô
+head = 0x555ae55d8010, head->next = 0x555ae55d7f70, head->key = 245, head->value = õ
+head = 0x555ae55d80b0, head->next = 0x555ae55d8010, head->key = 246, head->value = ö
+head = 0x555ae55d8150, head->next = 0x555ae55d80b0, head->key = 247, head->value = ÷
+head = 0x555ae55d81f0, head->next = 0x555ae55d8150, head->key = 248, head->value = ø
+head = 0x555ae55d8290, head->next = 0x555ae55d81f0, head->key = 249, head->value = ù
+head = 0x555ae55d8330, head->next = 0x555ae55d8290, head->key = 250, head->value = ú
+head = 0x555ae55d83d0, head->next = 0x555ae55d8330, head->key = 251, head->value = û
+head = 0x555ae55d8470, head->next = 0x555ae55d83d0, head->key = 252, head->value = ü
+head = 0x555ae55d8510, head->next = 0x555ae55d8470, head->key = 253, head->value = ý
+head = 0x555ae55d85b0, head->next = 0x555ae55d8510, head->key = 254, head->value = þ
+head = 0x555ae55d8650, head->next = 0x555ae55d85b0, head->key = 255, head->value = ÿ
+
+head = 0x555ae55d8650, head->next = 0x555ae55d85b0, head->key = 255
+
+
+head = 0x555ae55d8650, head->next = 0x555ae55d85b0, head->key = 255
+
+value = w, key = 119
+value = w, key = 119
+value = w, key = 119
+value = w, key = 119
+value = e, key = 101
+value = e, key = 101
+value = e, key = 101
+value = e, key = 101
+value = x, key = 120
+value = x, key = 120
+value = x, key = 120
+value = x, key = 120
+value = f, key = 102
+value = f, key = 102
+value = f, key = 102
+value = f, key = 102
+value = o, key = 111
+value = o, key = 111
+value = o, key = 111
+value = o, key = 111
+value = r, key = 114
+value = r, key = 114
+value = r, key = 114
+value = r, key = 114
+value = d, key = 100
+value = d, key = 100
+value = d, key = 100
+value = d, key = 100
+value = 
+, key = 10
+value = 
+, key = 10
+value = 
+, key = 10
+value = 
+, key = 10
+value = w, key = 119
+value = w, key = 119
+value = w, key = 119
+value = w, key = 119
+value = we, key = 256
+value = we, key = 256
+value = x, key = 120
+value = x, key = 120
+value = x, key = 120
+value = x, key = 120
+value = i, key = 105
+value = i, key = 105
+value = i, key = 105
+value = i, key = 105
+value = n, key = 110
+value = n, key = 110
+value = n, key = 110
+value = n, key = 110
+value = d, key = 100
+value = d, key = 100
+value = d, key = 100
+value = d, key = 100
+value = d
+, key = 262
+value = d
+, key = 262
+value = w, key = 119
+value = w, key = 119
+value = w, key = 119
+value = w, key = 119
+value = we, key = 256
+value = we, key = 256
+value = wex, key = 264
+value = wex, key = 264
+value = k, key = 107
+value = k, key = 107
+value = k, key = 107
+value = k, key = 107
+value = e, key = 101
+value = e, key = 101
+value = e, key = 101
+value = e, key = 101
+value = ex, key = 257
+value = ex, key = 257
+value = a, key = 97
+value = a, key = 97
+value = a, key = 97
+value = a, key = 97
+value = 
+, key = 10
+value = 
+, key = 10
+value = 
+, key = 10
+value = 
+, key = 10
+value = 
+w, key = 263
+value = 
+w, key = 263
+value = e, key = 101
+value = e, key = 101
+value = e, key = 101
+value = e, key = 101
+value = ex, key = 257
+value = ex, key = 257
+value = l, key = 108
+value = l, key = 108
+value = l, key = 108
+value = l, key = 108
+value = e, key = 101
+value = e, key = 101
+value = e, key = 101
+value = e, key = 101
+value = r, key = 114
+value = r, key = 114
+value = r, key = 114
+value = r, key = 114
+value = 
+, key = 10
+value = 
+, key = 10
+value = 
+, key = 10
+value = 
+, key = 10
+result 119
+result 101
+result 120
+result 102
+result 111
+result 114
+result 100
+result 10
+result 256
+result 120
+result 105
+result 110
+result 262
+result 264
+result 107
+result 257
+result 97
+result 263
+result 257
+result 108
+result 101
+result 114
+result 10
+compress
