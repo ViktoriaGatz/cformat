@@ -30,6 +30,10 @@ list_t* list_add(int key, char* value, list_t* head)
     return head;
 }
 /*------------------------------------------------------------------------*/
+void list_delete()
+{
+}
+/*------------------------------------------------------------------------*/
 int lookup(list_t* head, char* s)
 {
     //поиск клоча по значению (возвращает ключ в случае успеха, иначе - "0")
@@ -37,7 +41,6 @@ int lookup(list_t* head, char* s)
     tmp = head;
     while (tmp != NULL) {
         if (!strcmp(s, tmp->value)) {
-            printf("value = %s, key = %d\n", tmp->value, tmp->key);
             return tmp->key;
         }
         tmp = tmp->next;
@@ -51,17 +54,8 @@ list_t* init_vocabulary(list_t* head)
     char s[5];
     s[0] = 1;
     s[1] = '\0';
-    printf("head %p\n", head);
     for (int i = 1; i < 256; i++) {
         head = list_add(i, s, head);
-        if (head) {
-            printf("head = %p, head->next = "
-                   "%p, head->key = %d, head->value = %s\n",
-                   head,
-                   head->next,
-                   head->key,
-                   head->value);
-        }
         s[0]++;
     }
     return head;

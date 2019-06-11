@@ -18,26 +18,17 @@ int compress(FILE* lzw, FILE* txt)
         k++;
     }
     string[k] = '\0';
-    printf("string = %s\n", string);
     // добавляем нулевой элемент в будующий словарь
     list_t* head = list_add(0, "", NULL);
     // инициализируем словарь
     head = init_vocabulary(head);
-    printf("\nhead = %p, head->next = %p, head->key = %d\n\n",
-           head,
-           head->next,
-           head->key);
-    printf("\nhead = %p, head->next = %p, head->key = %d\n\n",
-           head,
-           head->next,
-           head->key);
     // пополнение словаря
     int* result = (int*)malloc(sizeof(int) * N);
     head = lzw_code(string, result, head, &k);
     for (int l = 0; l < k; l++) {
-        printf("result %d\n", result[l]);
+        printf("result[%d] =  %d\n", l, result[l]);
     }
-    // print_vocabulary(head);
+    print_vocabulary(head);
     free(string);
     // дополнительно сжимаем (3-я лаба)
     if (!code(lzw, result, k))
