@@ -28,11 +28,14 @@ int compress(FILE* lzw, FILE* txt)
     for (int l = 0; l < k; l++) {
         // printf("result[%d] =  %d\n", l, result[l]);
     }
-    // print_vocabulary(head);
+    print_vocabulary(head);
     free(string);
     // дополнительно сжимаем (3-я лаба)
     if (!code(lzw, result, k))
         printf("compress\n");
+    free(result);
+
+    free(head);
     return 0;
 }
 /*------------------------------------------------------------------------*/
@@ -75,7 +78,7 @@ int code(FILE* lzw, int* result, int k)
 {
     // 3-я лаба
     uint8_t tmp;
-    uint8_t* buf = (uint8_t*)malloc(sizeof(uint8_t) * 1500000);
+    uint8_t* buf = (uint8_t*)malloc(sizeof(uint8_t) * N);
 
     uint32_t z;
     for (int i = 0; i < k; i++) {

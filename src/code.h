@@ -1,6 +1,6 @@
 #ifndef CODE_H
 #define CODE_H
-#define N 65536
+#define N 1500000
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>

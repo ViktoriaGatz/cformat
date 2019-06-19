@@ -1,6 +1,5 @@
 #ifndef DECODE_H
 #define DECODE_H
-#define N 65536
 #include "code.h"
 #include <stdint.h>
 #include <stdio.h>

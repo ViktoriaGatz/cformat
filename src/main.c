@@ -25,6 +25,11 @@
 
   СРАВНЕНИЕ ФАЙЛОВ
   diff my.txt result.txt
+
+  ОТЛАДКА
+  gdb --args ./main -c -o my.lzw my.txt
+  gdb --args ./main -d -o result.txt my.lzw
+
   */
 /* clang-format on */
 #include "code.h"
@@ -32,7 +37,6 @@
 #include "str.h"
 #include "work.h"
 #include <stdio.h>
-#define N 65536
 
 int main(int argc, char* argv[])
 {

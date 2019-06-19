@@ -85,7 +85,7 @@ int uncompressed(FILE* txt, FILE* lzw)
     // массив, куда будут записаны разжатые символы для расшифровки
     int decod[N] = {0};
     // 3-я лаба начало
-    uint8_t* buf = (uint8_t*)malloc(sizeof(uint8_t) * 1500000);
+    uint8_t* buf = (uint8_t*)malloc(sizeof(uint8_t) * N);
     uint8_t** cur = &buf;
     int i = 0;
     int j = 0;
@@ -146,6 +146,8 @@ int uncompressed(FILE* txt, FILE* lzw)
     if (txt) {
         fwrite(write_value, sizeof(char), slen(write_value), txt);
     }
+
+    free(head);
     printf("uncompressed\n");
     return 0;
 }

@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+/*------------------------------------------------------------------------*/
 list_t* create_list(int key, char* value)
 {
     //создание листа
@@ -29,10 +30,6 @@ list_t* list_add(int key, char* value, list_t* head)
         return new;
     }
     return head;
-}
-/*------------------------------------------------------------------------*/
-void list_delete()
-{
 }
 /*------------------------------------------------------------------------*/
 int lookup(list_t* head, char* s)

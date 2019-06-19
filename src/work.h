@@ -1,6 +1,5 @@
 #ifndef WORK_H
 #define WORK_H
-#define N 65536
 #include "code.h"
 
 list_t* create_list(int key, char* value);
