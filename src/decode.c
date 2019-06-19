@@ -1,5 +1,6 @@
 #include "decode.h"
 #include "code.h"
+#include "str.h"
 #include "work.h"
 #include <assert.h>
 #include <stdint.h>
@@ -13,8 +14,8 @@ char* scat(char* s1, char* s2)
     if (!s1 || !s2) {
         return NULL;
     }
-    int n1 = strlen(s1);
-    int n2 = strlen(s2);
+    int n1 = slen(s1);
+    int n2 = slen(s2);
     char* result = (char*)malloc(n1 + n2 + 1);
     int i = 0;
     int j = 0;
@@ -35,10 +36,9 @@ char* scat_symbol(char* s1, char* s2)
     if (!s1 || !s2) {
         return NULL;
     }
-    int n1 = strlen(s1);
+    int n1 = slen(s1);
     char* result = (char*)malloc(n1 + 2);
     int i = 0;
-    int j = 0;
     for (i = 0; i < n1; i++) {
         result[i] = s1[i];
     }
@@ -72,7 +72,7 @@ char* lookup_value(list_t* head, int key)
     char* s = (char*)malloc(sizeof(char) * 128);
     while (tmp != NULL) {
         if (key == tmp->key) {
-            strcpy(s, tmp->value);
+            scpy(s, tmp->value);
             return s;
         }
         tmp = tmp->next;
@@ -103,7 +103,7 @@ int uncompressed(FILE* txt, FILE* lzw)
     // 3-я лаба конец
     // печать чисел, пригодных к расшифровке
     for (j = 0; j < size; j++) {
-        printf("%d\n", decod[j]);
+        // printf("%d\n", decod[j]);
     }
     // вставляем нулевой элемент в будующий словарь
     list_t* head = list_add(0, "", NULL);
@@ -133,20 +133,18 @@ int uncompressed(FILE* txt, FILE* lzw)
     free(tmp1);
     free(tmp2);
 
-    print_vocabulary(head);
+    // print_vocabulary(head);
     // расшифровываем
     char* tmp;
     char* write_value = "";
     for (i = 0; i < size; i++) {
-        printf("decod[%d] = %d\n", i, decod[i]);
         tmp = lookup_value(head, decod[i]);
-        printf("tmp = %s\n", tmp);
         write_value = scat(write_value, tmp);
         free(tmp);
     }
 
     if (txt) {
-        fwrite(write_value, sizeof(char), strlen(write_value), txt);
+        fwrite(write_value, sizeof(char), slen(write_value), txt);
     }
     printf("uncompressed\n");
     return 0;

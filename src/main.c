@@ -29,9 +29,9 @@
 /* clang-format on */
 #include "code.h"
 #include "decode.h"
+#include "str.h"
 #include "work.h"
 #include <stdio.h>
-#include <string.h>
 #define N 65536
 
 int main(int argc, char* argv[])
@@ -42,15 +42,15 @@ int main(int argc, char* argv[])
     }
     FILE* myfile;
     FILE* file;
-    if (strcmp(argv[2], "-o")) {
+    if (scmp(argv[2], "-o")) {
         printf("Unknown arg 3\n");
         return 0;
     }
-    if (!strcmp(argv[1], "-c")) {
+    if (!scmp(argv[1], "-c")) {
         myfile = fopen(argv[3], "w");
         file = fopen(argv[4], "r");
         compress(myfile, file);
-    } else if (!strcmp(argv[1], "-d")) {
+    } else if (!scmp(argv[1], "-d")) {
         myfile = fopen(argv[3], "w");
         file = fopen(argv[4], "r");
         uncompressed(myfile, file);

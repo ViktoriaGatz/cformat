@@ -1,6 +1,7 @@
 #include "work.h"
 #include "code.h"
 #include "decode.h"
+#include "str.h"
 #include <assert.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -13,7 +14,7 @@ list_t* create_list(int key, char* value)
     list_t* new = (list_t*)malloc(sizeof(list_t));
     if (new) {
         new->key = key;
-        strcpy(new->value, value);
+        scpy(new->value, value);
         new->next = NULL;
     }
     return new;
@@ -40,7 +41,7 @@ int lookup(list_t* head, char* s)
     list_t* tmp = (list_t*)malloc(sizeof(list_t));
     tmp = head;
     while (tmp != NULL) {
-        if (!strcmp(s, tmp->value)) {
+        if (!scmp(s, tmp->value)) {
             return tmp->key;
         }
         tmp = tmp->next;

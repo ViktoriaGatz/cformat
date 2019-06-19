@@ -1,11 +1,11 @@
 #include "code.h"
 #include "decode.h"
+#include "str.h"
 #include "work.h"
 #include <assert.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 int compress(FILE* lzw, FILE* txt)
 {
@@ -26,9 +26,9 @@ int compress(FILE* lzw, FILE* txt)
     int* result = (int*)malloc(sizeof(int) * N);
     head = lzw_code(string, result, head, &k);
     for (int l = 0; l < k; l++) {
-        printf("result[%d] =  %d\n", l, result[l]);
+        // printf("result[%d] =  %d\n", l, result[l]);
     }
-    print_vocabulary(head);
+    // print_vocabulary(head);
     free(string);
     // дополнительно сжимаем (3-я лаба)
     if (!code(lzw, result, k))
@@ -45,7 +45,6 @@ list_t* lzw_code(char* string, int* result, list_t* head, int* k)
     int root = 0;
     for (int i = 0; string[i] != '\0'; i++) {
         char* my = (char*)malloc(sizeof(char) * 128);
-        memset(my, 0, 128);
         if (i >= *k) {
             result[size] = 10;
             *k = size + 1;
