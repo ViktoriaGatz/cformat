@@ -1,66 +1,50 @@
-/* clang-format off */
-/*
-    АЛГОРИТМ LZW;
-    для размера получаемых кодов является размер словаря во фразах: LZW-коды
-    имеют постоянную длину, равную округленному в
-    большую сторону двоичному логарифму размера словаря.
-    sizeof(vocabulary) = log(2)n * sizeof()
-    log(2)512    = 9
-    log(2)1024   = 10
-    log(2)2048   = 11
-    log(2)4096   = 12
-    log(2)8192   = 13
-    log(2)16384  = 14
-    log(2)32768  = 15
-  ! log(2)65536  = 16 !
-  РЕАЛИЗАЦИЯ НА ОСНОВЕ СПИСКА
-  Тем самым, мы можем добавлять элементы в словарь пока не кончится память
-  на устройстве.
-
-  ПРОЦЕСС КОДИРОВАНИЯ
-  ./main -c -o my.lzw my.txt
-
-  ПРОЦЕСС ДЕКОДИРОВАНИЯ
-  ./main -d -o result.txt my.lzw
-
-  СРАВНЕНИЕ ФАЙЛОВ
-  diff my.txt result.txt
-
-  ОТЛАДКА
-  gdb --args ./main -c -o my.lzw my.txt
-  gdb --args ./main -d -o result.txt my.lzw
-
-  */
-/* clang-format on */
-#include "code.h"
-#include "decode.h"
+#include "compress.h"
 #include "str.h"
-#include "work.h"
+#include "uncompress.h"
 #include <stdio.h>
+#include <stdlib.h>
+
+int compress(FILE* lz78, FILE* txt, int N);
+int uncompress(FILE* txt, FILE* lz78, int N);
 
 int main(int argc, char* argv[])
 {
-    if (argc != 5) {
-        printf("No argument\n");
-        return 0;
+    char hint[]
+            = "lz78 -c -o file.lz78 file.txt 65536\nlz78 -d -o file1.txt"
+              "file.lz78 65536\n";
+    if (argc != 6) {
+        printf("No argument\n%s", hint);
+        return 1;
     }
     FILE* myfile;
     FILE* file;
+    int N = 0;
+    N = atoi(argv[5]);
+    if (N < 0 || N > 2147483647) {
+        printf("Big or smal number\n%s", hint);
+        return 1;
+    }
     if (scmp(argv[2], "-o")) {
-        printf("Unknown arg 3\n");
-        return 0;
+        printf("Unknown arg 3\n%s", hint);
+        return 1;
     }
     if (!scmp(argv[1], "-c")) {
         myfile = fopen(argv[3], "w");
         file = fopen(argv[4], "r");
-        compress(myfile, file);
+        if (compress(myfile, file, N)) {
+            printf("Error compress\n");
+            return 1;
+        }
     } else if (!scmp(argv[1], "-d")) {
         myfile = fopen(argv[3], "w");
         file = fopen(argv[4], "r");
-        uncompressed(myfile, file);
+        if (uncompress(myfile, file, N)) {
+            printf("Error uncompress\n");
+            return 1;
+        }
     } else {
         printf("Unknown arg 2\n");
-        return 0;
+        return 1;
     }
     fclose(myfile);
     fclose(file);
