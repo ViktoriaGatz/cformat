@@ -1,7 +1,7 @@
 #include "str.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+// конкатинация строк
 char* scat(char* s1, char* s2)
 {
     if (!s1 || !s2) {
@@ -21,6 +21,7 @@ char* scat(char* s1, char* s2)
     result[j + i] = '\0';
     return result;
 }
+// конкатинация строки и символа
 char* scat_c(char* s, char c)
 {
     if (!s) {
@@ -56,6 +57,7 @@ char* scat_symbol(char* s1, char* s2)
     return result;
 }
 */
+// вычисление длины строки
 unsigned int slen(const char* s)
 {
     const char* sc = s;
@@ -64,6 +66,7 @@ unsigned int slen(const char* s)
     }
     return sc - s;
 }
+// сравнивание строк
 int scmp(const char* p1, const char* p2)
 {
     if (!p1 || !p2) {
@@ -80,6 +83,7 @@ int scmp(const char* p1, const char* p2)
     } while (c1 == c2);
     return c1 - c2;
 }
+// копирование строк
 char* scpy(char* dst, const char* src)
 {
     if (!src) {

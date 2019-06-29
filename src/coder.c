@@ -6,8 +6,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// UTF-8
+
+// содирование числа
 int encode(uint32_t code_point, CodeUnits* code_units)
 {
+    // здесь мы решаем, сколько битов нам потребутся для кодирования
+    // и кодируем
     if (code_point < 128) {
         code_units->length = 1;
         code_units->code[0] = code_point & 127;
@@ -32,7 +37,7 @@ int encode(uint32_t code_point, CodeUnits* code_units)
     }
     return 0;
 }
-
+// декодирование чилса
 uint32_t decode(const CodeUnits* code_units)
 {
     if (code_units->length == 1) {
@@ -58,7 +63,7 @@ uint32_t decode(const CodeUnits* code_units)
 
     return 0;
 }
-
+// заполнение структуры code_units
 int name(int size, CodeUnits* code_units, FILE* in)
 {
     code_units->length = size;
@@ -69,7 +74,7 @@ int name(int size, CodeUnits* code_units, FILE* in)
     }
     return 0;
 }
-
+// читаем следующий символ
 int read_next_code_unit(FILE* in, CodeUnits* code_units)
 {
     uint8_t k;
@@ -99,7 +104,7 @@ int read_next_code_unit(FILE* in, CodeUnits* code_units)
 
     return 0;
 }
-
+//запись в бинарник
 int write_code_unit(FILE* out, const CodeUnits* code_units)
 {
     fwrite(code_units->code, sizeof(uint8_t), code_units->length, out);

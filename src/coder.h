@@ -9,9 +9,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+// enum - перечисляемый тип
+// здесь задаются варианты, сколько байт потребуется для кодирования
 enum { MaxCodeLength = 4 };
-
+// струкура из которой строится закодированное число
 typedef struct {
     uint8_t code[MaxCodeLength];
     size_t length;
